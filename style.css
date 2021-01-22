@@ -10,23 +10,49 @@
     --card-orange: #E09F3E;
     --card-purple: #7F2982;
 
-    /* background */
-    --bg-gradient-light-blue: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-    --bg-solid-light-blue: #0093E9;
-
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .wrap{
+    min-height: 100vh;
     background-color: var(--card-blue);
-    height: 100%;
-    width: 100%;
 }
 
+.container{
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+section{
+    padding: 10px 10px;
+}
+
+.header{
+    background-color: var(--white);
+    text-align: center;
+}
+
+.header h1{
+    color: var(--light-blue);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav{
+    background-color: var(--light-blue);
+}
+
+.main{
+    background-color: var(--gray);
+    height: 100%;
+
+}
