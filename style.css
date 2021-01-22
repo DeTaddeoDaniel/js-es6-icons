@@ -49,6 +49,7 @@ section{
 
 .nav{
     background-color: var(--light-blue);
+    color: white;
 }
 
 .main{
