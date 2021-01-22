@@ -1,3 +1,32 @@
-body{
-    background-color: peru;
+:root{
+    
+    /* color page */
+    --light-blue: #3993DD;
+    --white: rgb(255, 255, 255);
+    --gray: #B8BBC0;
+    
+    /* color card */
+    --card-blue: #111D4A;
+    --card-orange: #E09F3E;
+    --card-purple: #7F2982;
+
+    /* background */
+    --bg-gradient-light-blue: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    --bg-solid-light-blue: #0093E9;
+
 }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrap{
+    background-color: var(--card-blue);
+    height: 100%;
+    width: 100%;
+}
+
