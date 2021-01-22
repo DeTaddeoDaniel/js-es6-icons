@@ -42,7 +42,7 @@ section{
 
 .header h1{
     color: var(--light-blue);
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -50,7 +50,39 @@ section{
 .nav{
     background-color: var(--light-blue);
     color: white;
+    font-size: 18px;
 }
+
+.nav span{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav select{
+    background-color: rgb(25, 201, 207);
+    border: 0;
+    max-width: 300px;
+    display: inline-block;
+}
+
+.nav select option{
+    background-color: #520bd6;
+    color: white;
+    font-size: inherit;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: capitalize;
+}
+
+ /* <span>Filtra per tipo</span>
+        <select id="type">
+            <option value="all">all</option>
+            <option value="animali">animali</option>
+            <option value="vegetali">vegetali</option>
+            <option value="utenti">utenti</option>
+        </select>
+    </div> */
 
 .main{
     background-color: var(--gray);
