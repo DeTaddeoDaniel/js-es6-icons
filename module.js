@@ -119,35 +119,67 @@ const filter = document.getElementById('categoria')
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('-- page load --')
-  addColor()
+  filterArray()
+
+  filter.addEventListener('change', () => {
+    console.log('-- change --')
+    filterArray()
+  })
 })
 
-function addColor(){
-  
+// filtro elementi categoria
+function filterArray(){
+  console.log('-- filter function --');
+  const valueFiltrer = filter.value;
+  // console.log(valueFiltrer)
+
+  const iconsFilter = icons.filter( icon => {
+    // console.log(valueFiltrer)
+    // console.log(icon.type)
+    if (icon.type == valueFiltrer || valueFiltrer == 'all'){
+      return icon;
+    }
+  })
+
+  console.log(iconsFilter);
+  addColor(iconsFilter);
+}
+
+// aggoungi icon il colore
+function addColor(inputArray){
+  console.log('-- add color --')
+
   const iconWithColor = [];
   
-  icons.forEach( icon => {
+  inputArray.forEach( icon => {
     const indexColor = categoria.indexOf(icon.type);
-    console.log(indexColor)
+    // console.log(indexColor)
 
     const colorImage = color[indexColor]
-    console.log(colorImage)
+    // console.log(colorImage)
     
-    iconWithColor.push({ ...icon, colorImage})
+    iconWithColor.push(
+      { ...icon, colorImage}
+    )
 
   });
 
   console.log(iconWithColor)
-
   printCard(iconWithColor)
 }
 
 function printCard(icons) {
+
+  console.log('-- print function --')
   
+  // reset lista dinamica
+  iconList.innerHTML = '';
+  
+  // inserimento lista dinamica
   icons.forEach(icon => {
     const {name, prefix, type, family, colorImage} = icon
 
-    console.log(icon)
+    // console.log(icon)
 
     let card = /*html*/ `
       <div class='card'>
