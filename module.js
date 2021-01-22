@@ -195,7 +195,6 @@ function printCard(icons) {
 
     // console.log(card)
 
-    iconList.innerHTML = iconList.innerHTML +card
-
+     iconList.innerHTML += card;
   });
 }

@@ -24,7 +24,7 @@
 }
 
 .container{
-    max-width: 400px;
+    max-width: 900px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -75,27 +75,28 @@ section{
     text-transform: capitalize;
 }
 
- /* <span>Filtra per tipo</span>
-        <select id="type">
-            <option value="all">all</option>
-            <option value="animali">animali</option>
-            <option value="vegetali">vegetali</option>
-            <option value="utenti">utenti</option>
-        </select>
-    </div> */
-
 .main{
     background-color: var(--gray);
     height: 100%;
 }
 
+.iconsList{
+    width: 100%;
+    flex-wrap: wrap;
+    display: inline-flex;
+}
+
 .card{
+    flex-basis: calc(25% - 20px);
     background-color: white;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    text-align: center;
     box-shadow: 1px 1px 1px #000;
+}
+
+.content{
+    text-align: center;
 }
 
 .card p{
