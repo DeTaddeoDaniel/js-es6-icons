@@ -99,11 +99,15 @@ section{
 }
 
 .card p{
+    font-size: 20px;
     text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
-/* <div class='card'>
-        <div class="content">
-          <i class="${family} ${prefix}-${name}"></i>
-          <p>${name}</p>
-        </div>
-      </div> */
+
+.card i{
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

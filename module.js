@@ -112,30 +112,56 @@ const icons = [
     }
   ];
 
-const categoria = ['animali', 'vegetali', 'utenti']
+const categoria = ['animal', 'vegetable', 'user']
 const color = ['--card-blue','--card-orange','--card-purple']
 const iconList = document.getElementById('iconsList')
+const filter = document.getElementById('categoria')
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('-- page load --')
-  printCard(icons)
+  addColor()
 })
+
+function addColor(){
+  
+  const iconWithColor = [];
+  
+  icons.forEach( icon => {
+    const indexColor = categoria.indexOf(icon.type);
+    console.log(indexColor)
+
+    const colorImage = color[indexColor]
+    console.log(colorImage)
+    
+    iconWithColor.push({ ...icon, colorImage})
+
+  });
+
+  console.log(iconWithColor)
+
+  printCard(iconWithColor)
+}
 
 function printCard(icons) {
   
   icons.forEach(icon => {
-    const {name, prefix, type, family} = icon
+    const {name, prefix, type, family, colorImage} = icon
+
+    console.log(icon)
 
     let card = /*html*/ `
       <div class='card'>
         <div class="content">
-          <i class="${family} ${prefix}${name}"></i>
+          <i 
+              class="${family} ${prefix}${name}"
+              style = 'color: var(${colorImage});'
+            ></i>
           <p>${name}</p>
         </div>
       </div>
     `
 
-    console.log(card)
+    // console.log(card)
 
     iconList.innerHTML = iconList.innerHTML +card
 
