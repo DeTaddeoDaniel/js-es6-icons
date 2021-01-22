@@ -116,13 +116,19 @@ const categoria = ['animal', 'vegetable', 'user']
 const color = ['--card-blue','--card-orange','--card-purple']
 const iconList = document.getElementById('iconsList')
 const filter = document.getElementById('categoria')
+const search = document.getElementById('search')
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('-- page load --')
   filterArray()
 
   filter.addEventListener('change', () => {
-    console.log('-- change --')
+    console.log('-- change filter --')
+    filterArray()
+  })
+
+  search.addEventListener('input', () => {
+    console.log('-- change search--')
     filterArray()
   })
 })
@@ -131,15 +137,20 @@ document.addEventListener('DOMContentLoaded', function () {
 function filterArray(){
   console.log('-- filter function --');
   const valueFiltrer = filter.value;
-  // console.log(valueFiltrer)
+  const valueSearch = search.value;
+  // console.log(valueSearch)
 
-  const iconsFilter = icons.filter( icon => {
-    // console.log(valueFiltrer)
-    // console.log(icon.type)
-    if (icon.type == valueFiltrer || valueFiltrer == 'all'){
+  let iconsFilter = icons.filter( icon => {
+    if (icon.type == valueFiltrer|| valueFiltrer == 'all'){
       return icon;
     }
-  })
+  });
+
+  iconsFilter = iconsFilter.filter( icon => {
+    if (icon.name.includes(valueSearch) || valueSearch == ''){
+      return icon;
+    }
+  });
 
   console.log(iconsFilter);
   addColor(iconsFilter);

@@ -64,6 +64,8 @@ section{
     border: 0;
     max-width: 300px;
     display: inline-block;
+    color: inherit;
+    font-weight: bold;
 }
 
 .nav select option{
