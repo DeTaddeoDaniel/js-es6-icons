@@ -112,3 +112,32 @@ const icons = [
     }
   ];
 
+const categoria = ['animali', 'vegetali', 'utenti']
+const color = ['--card-blue','--card-orange','--card-purple']
+const iconList = document.getElementById('iconsList')
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('-- page load --')
+  printCard(icons)
+})
+
+function printCard(icons) {
+  
+  icons.forEach(icon => {
+    const {name, prefix, type, family} = icon
+
+    let card = /*html*/ `
+      <div class='card'>
+        <div class="content">
+          <i class="${family} ${prefix}${name}"></i>
+          <p>${name}</p>
+        </div>
+      </div>
+    `
+
+    console.log(card)
+
+    iconList.innerHTML = iconList.innerHTML +card
+
+  });
+}

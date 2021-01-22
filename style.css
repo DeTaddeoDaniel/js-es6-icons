@@ -20,7 +20,7 @@
 
 .wrap{
     min-height: 100vh;
-    background-color: var(--card-blue);
+    background-color: var(--gray);
 }
 
 .container{
@@ -87,5 +87,23 @@ section{
 .main{
     background-color: var(--gray);
     height: 100%;
-
 }
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 1px #000;
+}
+
+.card p{
+    text-transform: uppercase;
+}
+/* <div class='card'>
+        <div class="content">
+          <i class="${family} ${prefix}-${name}"></i>
+          <p>${name}</p>
+        </div>
+      </div> */
