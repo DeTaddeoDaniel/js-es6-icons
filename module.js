@@ -117,7 +117,6 @@ const color = ['--card-blue','--card-orange','--card-purple']
 const iconList = document.getElementById('iconsList')
 const filter = document.getElementById('categoria')
 const search = document.getElementById('search')
-const addCard = document.getElementById('addCard')
 const numIcon = document.getElementById('numberIcon')
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -134,10 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
     filterArray()
   })
 
-  addCard.addEventListener('click', () => {
-    console.log('-- add card--')
-    
-  })
 })
 
 // filtro elementi categoria
