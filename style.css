@@ -82,6 +82,10 @@ section{
     height: 100%;
 }
 
+.main h3{
+    border-bottom: 3px solid gray;
+}
+
 .iconsList{
     width: 100%;
     flex-wrap: wrap;
