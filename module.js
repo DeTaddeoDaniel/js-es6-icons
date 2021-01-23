@@ -117,6 +117,8 @@ const color = ['--card-blue','--card-orange','--card-purple']
 const iconList = document.getElementById('iconsList')
 const filter = document.getElementById('categoria')
 const search = document.getElementById('search')
+const addCard = document.getElementById('addCard')
+const numIcon = document.getElementById('numberIcon')
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('-- page load --')
@@ -130,6 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
   search.addEventListener('input', () => {
     console.log('-- change search--')
     filterArray()
+  })
+
+  addCard.addEventListener('click', () => {
+    console.log('-- add card--')
+    
   })
 })
 
@@ -182,6 +189,9 @@ function addColor(inputArray){
 function printCard(icons) {
 
   console.log('-- print function --')
+
+  numIcon.innerText = icons.length;
+  console.log(icons.length)
   
   // reset lista dinamica
   iconList.innerHTML = '';
